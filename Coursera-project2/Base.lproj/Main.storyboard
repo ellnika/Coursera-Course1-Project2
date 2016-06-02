@@ -1,25 +1,83 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="in kg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yI4-7P-ngK">
+                                <rect key="frame" x="266.5" y="141" width="36.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hjz-re-Ebh">
+                                <rect key="frame" x="139" y="226" width="51" height="30"/>
+                                <state key="normal" title="Update"/>
+                                <connections>
+                                    <action selector="updateButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KpW-Qs-BE9"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click Update for the answer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wSn-Lh-Au7">
+                                <rect key="frame" x="38" y="305" width="212" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tu2-Zl-Bn4">
+                                <rect key="frame" x="13" y="141" width="245.5" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="1uY-cl-Anv">
+                                <rect key="frame" x="52.5" y="190" width="224" height="29"/>
+                                <segments>
+                                    <segment title="in stones"/>
+                                    <segment title="in pounds"/>
+                                    <segment title="in grams"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yI4-7P-ngK" firstAttribute="leading" secondItem="Tu2-Zl-Bn4" secondAttribute="trailing" constant="8" id="3Gg-0R-o0O"/>
+                            <constraint firstItem="wSn-Lh-Au7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="31.5" id="CXs-2j-w7y"/>
+                            <constraint firstItem="1uY-cl-Anv" firstAttribute="top" secondItem="Tu2-Zl-Bn4" secondAttribute="bottom" constant="19" id="GRV-yO-eKb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yI4-7P-ngK" secondAttribute="trailing" constant="1" id="Grj-0q-iwb"/>
+                            <constraint firstItem="1uY-cl-Anv" firstAttribute="top" secondItem="Tu2-Zl-Bn4" secondAttribute="bottom" constant="19" id="IeQ-Sx-kUM"/>
+                            <constraint firstItem="Hjz-re-Ebh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="4.5" id="Jn3-tA-wye"/>
+                            <constraint firstItem="1uY-cl-Anv" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-80" id="K9E-7u-tm4"/>
+                            <constraint firstItem="wSn-Lh-Au7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-16" id="LKo-on-bJc"/>
+                            <constraint firstItem="1uY-cl-Anv" firstAttribute="top" secondItem="yI4-7P-ngK" secondAttribute="bottom" constant="28" id="RVf-1J-wFy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yI4-7P-ngK" secondAttribute="trailing" constant="1" id="ay4-hL-SEL"/>
+                            <constraint firstItem="1uY-cl-Anv" firstAttribute="centerX" secondItem="Hjz-re-Ebh" secondAttribute="centerX" id="kWa-Hz-JV6"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Tu2-Zl-Bn4" secondAttribute="leading" constant="3" id="sQu-FR-eR6"/>
+                            <constraint firstItem="wSn-Lh-Au7" firstAttribute="top" secondItem="Hjz-re-Ebh" secondAttribute="bottom" constant="49" id="ub4-2D-MTk"/>
+                            <constraint firstItem="Hjz-re-Ebh" firstAttribute="top" secondItem="1uY-cl-Anv" secondAttribute="bottom" constant="8" id="zH8-ZK-EVY"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="inputField" destination="Tu2-Zl-Bn4" id="gmq-ZZ-fl1"/>
+                        <outlet property="outputField" destination="wSn-Lh-Au7" id="Lok-oH-dgI"/>
+                        <outlet property="segmentController" destination="1uY-cl-Anv" id="F2D-eK-Ddw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="182" y="362"/>
         </scene>
     </scenes>
 </document>
